@@ -4,9 +4,13 @@ on:
       username:
         required: true
         type: string
+      repo:
+        required: false
+        type: string
+        default: ${{ github.event.repository.name }}
 jobs:
   main:
     name: Say Hello
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello ${{ inputs.username }}"
+      - run: echo "hello ${{ inputs.username }} in ${{ inputs.repo }}"
