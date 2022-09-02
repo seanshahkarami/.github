@@ -3,7 +3,7 @@ on:
 
 jobs:
   main:
-    name: Go CI/CD
+    name: Go
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
